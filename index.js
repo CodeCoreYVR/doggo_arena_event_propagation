@@ -111,5 +111,24 @@ document.querySelectorAll('.doggo.fighter').forEach(doggoNode => {
 })
 
 
+//Typing loudly
+const random = n => Math.ceil(Math.random() * n);
+console.log(random)
+
+const keySound = () => new Audio(`sounds/vintage-keyboard-${random(5)}.wav`);
+console.log(keySound)
+document.querySelectorAll("input").forEach(inputNode => {
+    inputNode.addEventListener("input", function(event) {
+        keySound().play();
+    })
+})
+
+const explosionSound = () => new Audio("sounds/small-explosion.wav")
+document.querySelector("form").addEventListener('submit', function(event){
+    event.preventDefault();
+    explosionSound().play();
+});
+
+
 
 
