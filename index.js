@@ -129,6 +129,19 @@ document.querySelector("form").addEventListener('submit', function(event){
     explosionSound().play();
 });
 
+//Add Applicant Avatar
+const applicantPreview = document.querySelector(
+    "#applicant-preview .doggo.blank"
+)
+
+document
+    .querySelector(`input[name="picture-url"]`)
+    .addEventListener("input", function(event){
+        const imageUrl = event.currentTarget.value;
+        console.log("imageUrl: ", imageUrl);
+        applicantPreview.style.backgroundImage = `url(${imageUrl})`;
+    })
+
 
 
 
