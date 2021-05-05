@@ -153,6 +153,25 @@ document.addEventListener("keypress", function(event){
     }
 })
 
+document.addEventListener("keydown", function(event){
+    console.log(event);
+    const {
+        currentTarget,
+        target,
+        keyCode,
+        altKey,
+        shiftKey,
+        metaKey,
+        key
+    } = event;
+
+   
+
+    if (altKey && shiftKey && keyCode === 73) {
+        window.location.href = "http://nyan.cat";
+    }
+})
+
 
 
 
