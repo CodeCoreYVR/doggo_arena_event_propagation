@@ -137,6 +137,7 @@ const applicantPreview = document.querySelector(
 document
     .querySelector(`input[name="picture-url"]`)
     .addEventListener("input", function(event){
+        event.preventDefault();
         const imageUrl = event.currentTarget.value;
         console.log("imageUrl: ", imageUrl);
         applicantPreview.style.backgroundImage = `url(${imageUrl})`;
