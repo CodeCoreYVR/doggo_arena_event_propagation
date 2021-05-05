@@ -143,3 +143,11 @@ html * {
 .selected {
   border: 5px solid skyblue;
 }
+
+.inverted {
+  filter: invert(1);
+}
+
+.flipped {
+  transform: rotate(180deg)
+}

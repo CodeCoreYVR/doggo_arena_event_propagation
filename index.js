@@ -63,14 +63,14 @@ allDoggos.forEach(dog => {
 
 //Exercise: Clicks, Events and Properties
 toxicTim.addEventListener('click', function(event) {
-    console.log(event.target) //either ToxicTim div or h1 tag sityting on top of it
-    console.log(event.currentTarget) //also ToxicTim because the listener is registered on this node
-    console.log(event.clientX, event.clientY) //gives the x and y position that was clicked on. the numbers refers to the pixels and will be different on the browser you're using
+    // console.log(event.target) //either ToxicTim div or h1 tag sityting on top of it
+    // console.log(event.currentTarget) //also ToxicTim because the listener is registered on this node
+    // console.log(event.clientX, event.clientY) //gives the x and y position that was clicked on. the numbers refers to the pixels and will be different on the browser you're using
 })
 
 const TeamSalmon = document.querySelector('.team.salmon')
 TeamSalmon.addEventListener('click', function(){
-    console.log(this)
+    // console.log(this)
 })
 
 //Exercise: Last in queue
@@ -84,3 +84,32 @@ allDoggos.forEach((dogNode) => {
         rosterN.appendChild(dogN) //should shift child to end of roster
     })
 })
+
+document.querySelectorAll('.doggo.fighter').forEach(doggoNode => {
+    //dblclick
+    doggoNode.addEventListener("dblclick", function(event) {
+        console.log(`${event.currentTarget.id} was double clicked!`);
+        event.currentTarget.classList.toggle("inverted");
+        console.log("event: ", event)
+    })
+
+    //mousedown
+    doggoNode.addEventListener("mousedown", function(event) {
+        event.currentTarget.classList.add("flipped");
+    })
+
+    //mouseup
+    doggoNode.addEventListener("mouseup", function(event) {
+        event.currentTarget.classList.remove("flipped");
+    })
+
+    //mouseleave
+    doggoNode.addEventListener("mouseleave", function(event) {
+        event.currentTarget.classList.remove("flipped");
+    })
+
+})
+
+
+
+
