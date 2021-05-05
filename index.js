@@ -51,3 +51,15 @@ const TeamSalmon = document.querySelector('.team.salmon')
 TeamSalmon.addEventListener('click', function(){
     console.log(this)
 })
+
+//Exercise: Last in queue
+
+//1. grab all doggos
+allDoggos.forEach((dogNode) => {
+    //2 loop through add event
+    dogNode.addEventListener('click', function(event) {
+        const dogN = event.currentTarget
+        const rosterN = dogN.parentElement
+        rosterN.appendChild(dogN) //should shift child to end of roster
+    })
+})
