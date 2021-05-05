@@ -143,6 +143,16 @@ document
         applicantPreview.style.backgroundImage = `url(${imageUrl})`;
     })
 
+//Shortcut of the ninja
+let lettersTyped = "";
+document.addEventListener("keypress", function(event){
+    lettersTyped += event.key;
+    const lastFiveLettersTyped = lettersTyped.slice(lettersTyped.length - 5);
+    if (lastFiveLettersTyped === "panic" ){
+        window.location.replace("http://hackertyper.net")
+    }
+})
+
 
 
 
