@@ -7,9 +7,16 @@
 // window.addEventListener( 'load', () => { //window loaded })
 
 //Listening to events on the document itself
-document.addEventListener('click', function(event) {
-    console.log('document was clicked!')
+document.addEventListener('click', event => {
+    console.log(event)
+    // console.log('document was clicked!')
     console.log(event.target)
+
+    //Remember that currentTarget is not available to the event object other that the instance
+    //when the event is triggered.  To save its value you will need to grab it like this:
+    // my_currentT = event.currentTarget
+    // console.log(my_currentT)
+
     console.log(event.currentTarget)
     console.log(this)
 })
