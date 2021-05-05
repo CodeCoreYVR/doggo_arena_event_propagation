@@ -153,6 +153,7 @@ document.addEventListener("keypress", function(event){
     }
 })
 
+//Nyan Cat
 document.addEventListener("keydown", function(event){
     console.log(event);
     const {
@@ -173,5 +174,8 @@ document.addEventListener("keydown", function(event){
 })
 
 
-
+//Run Script
+document.addEventListener("DOMContentLoaded", function(event){
+    console.log("The page has loaded!");
+})
 
