@@ -28,3 +28,7 @@ allDoggos.forEach(dog => {
         console.log('doggo name clicked!')
     })
 })
+
+//To test if an object is an instance of a Node in order to prevent 
+//adding eventListener to null, use instanceof
+//document.querySelector("jgjhfgj") instanceof Node   => returns false
